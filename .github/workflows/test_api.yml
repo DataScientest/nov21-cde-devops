@@ -27,7 +27,7 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements-dev.txt
-        
+
       - name: Run API
         run: python3 -m uvicorn main:api &
 
