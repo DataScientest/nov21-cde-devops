@@ -57,6 +57,8 @@ def test_get_users():
         url=f"{API_URL}/users"
     )
 
+    assert response.status_code == 400
+    
     assert response.status_code == 200, response.content
     assert response.json()["status"] == 1
     assert len(response.json()["users"]) == 2, response.json()
