@@ -49,3 +49,18 @@ def get_object(object_id: int):
         "status": 1,
         "object_id": object_id
     }
+
+
+@api.get('/users')
+def get_users():
+    return {
+        "status": 1,
+        "users": [
+            {
+                "name": "Paul"
+            },
+            {
+                "name": "Lara"
+            }
+        ]
+    }
