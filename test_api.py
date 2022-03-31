@@ -50,3 +50,15 @@ def test_get_object():
     )
 
     assert response.status_code == 404, response.content
+
+
+def test_get_users():
+    response = requests.get(
+        url=f"{API_URL}/users"
+    )
+
+    assert response.status_code == 400
+    
+    assert response.status_code == 200, response.content
+    assert response.json()["status"] == 1
+    assert len(response.json()["users"]) == 2, response.json()
