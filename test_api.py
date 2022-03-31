@@ -60,3 +60,11 @@ def test_get_users():
     assert response.status_code == 200, response.content
     assert response.json()["status"] == 1
     assert len(response.json()["users"]) == 2, response.json()
+
+
+def test_aurevoir():
+    response = requests.get(
+        url=f"{API_URL}/aurevoir"
+    )
+
+    assert response.status_code == 200, response.content

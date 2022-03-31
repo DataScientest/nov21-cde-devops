@@ -64,3 +64,10 @@ def get_users():
             }
         ]
     }
+
+
+@api.get('/aurevoir')
+def get_aurevoir():
+    return {
+        "bye": "bye"
+    }
